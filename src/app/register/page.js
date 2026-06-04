@@ -47,8 +47,7 @@ export default function RegisterPage() {
                     "application/json",
                 },
                 body: JSON.stringify(form),
-            }
-        );
+            });
 
         const data = await res.json();
          console.log(data);
@@ -65,7 +64,7 @@ export default function RegisterPage() {
            window.location.href = "/";
         }
 
-        else if (data.status === "exists") {
+        else if (data.status === "exist") {
 
             alert("Email already exists.");
         }
@@ -75,8 +74,8 @@ export default function RegisterPage() {
         }
          }
          catch (error) {
-            console.error(error);
-            alert("Server error");
+            console.error("REGISTER ERROR:", error);
+            alert("error.message");
          }
 
         
