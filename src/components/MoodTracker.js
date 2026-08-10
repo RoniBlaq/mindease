@@ -13,7 +13,7 @@
 
  const [selectedMood, setSelectedMood] = useState(""); 
 
- const API_BASE = "https://mindrelax.infinityfreeapp.com/mindease-api"; 
+ const API_BASE = "mindease-api-production-65ca.up.railway.app"; 
  
  const saveMood = async (mood) => 
     {

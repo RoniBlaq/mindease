@@ -15,7 +15,7 @@ export default function LoginPage() {
     }, []);
 
     const API_BASE = 
-    "https://mindrelax.infinityfreeapp.com/mindease-api";
+    "mindease-api-production-65ca.up.railway.app";
 
     const [email, setEmail] =
        useState("");

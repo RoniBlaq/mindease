@@ -9,7 +9,7 @@ import { Bar } from "react-chartjs-2"; ChartJS.register( CategoryScale, LinearSc
 export default function MoodChart() { 
     
     const [chartData, setChartData] = useState(null); 
-    const API_BASE = "https://mindrelax.infinityfreeapp.com/mindease-api"; 
+    const API_BASE = "mindease-api-production-65ca.up.railway.app"; 
     useEffect(() => {
          fetch( `${API_BASE}/get-moods.php` ) 
          .then((res) => res.json()) 
