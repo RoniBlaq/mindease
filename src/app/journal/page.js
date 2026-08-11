@@ -8,7 +8,7 @@ export default function JournalPage() {
     const [entries, setEntries] = useState([]);
 
     const API_BASE =
-         "mindease-api-production-65ca.up.railway.app";
+         "https://mindease-api-production-65ca.up.railway.app";
 
          const fetchEntries = async () => {
            try{

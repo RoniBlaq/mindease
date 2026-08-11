@@ -8,7 +8,7 @@ const [content, setContent] = useState("")
     const [posts, setPosts] = useState([]);
 
     const API_BASE =
-    "mindease-api-production-65ca.up.railway.app";
+    "https://mindease-api-production-65ca.up.railway.app";
 
     const fetchPosts = async () => {
          try{

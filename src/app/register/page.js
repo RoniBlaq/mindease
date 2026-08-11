@@ -16,7 +16,7 @@ export default function RegisterPage() {
     }, []);
 
     const API_BASE =
-    "mindease-api-production-65ca.up.railway.app"; 
+    "https://mindease-api-production-65ca.up.railway.app"; 
     
     const [form, setForm] =
     useState({

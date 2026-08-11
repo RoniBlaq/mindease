@@ -17,7 +17,7 @@ export default function Dashboard() {
             setUserName(user.name);
 
              fetch(
-            `mindease-api-production-65ca.up.railway.app/dashboard/stats.php?user_id=${user.id}`
+            `https://mindease-api-production-65ca.up.railway.app/dashboard/stats.php?user_id=${user.id}`
          )
          .then(res => res.json())
          .then(data => {
