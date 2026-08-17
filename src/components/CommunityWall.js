@@ -132,11 +132,13 @@ const savePost = async () => {
 
 
     return (
-        <div className={`min-h-screen p-4 transition-colors duration-300 ${
-            dark
-            ? "bg-gray-900 text-white"
-            : "bg-gray-100 text-gray-900"
-        }`}>
+        <div
+  className={`min-h-screen -m-4 md:-m-6 p-4 md:p-6 transition-colors duration-300 ${
+    dark
+      ? "bg-gray-900 text-white"
+      : "bg-gray-100 text-gray-900"
+  }`}
+>
 
             <div className="flex justify-end mb-4">
                             <button
@@ -147,7 +149,9 @@ const savePost = async () => {
                 </button>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-400">
+            <h1 className={`text-2xl sm:text-3xl font-bold mb-6 text-center ${
+                dark ? "text-white" : "text-gray-700"
+                }`}>
            
                 Community Group
             </h1>
@@ -176,7 +180,7 @@ const savePost = async () => {
                 {posts.map((post) => (
                      <div 
                         key={post.id} 
-                        className={`shadow rounded-2xl p-4 border border ${
+                        className={`shadow rounded-2xl p-4 border ${
                             dark
                             ? "bg-gray-800 border-gray-700 text-white"
                             : "bg-white border-gray-100 text-gray-900"
