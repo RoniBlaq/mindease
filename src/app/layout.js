@@ -12,8 +12,27 @@ export const metadata = {
   creator: "Ronkedigital",
 
   // viewport: "width=device-width, initial-scale=1",
+
+  openGraph: {
+    title: "MindEase",
+    description: "Stress Relief Platform",
+    url: "https://mindease-smoky.vercel.app",
+    siteName: "Mindease",
+    images:[
+      {
+        url:"/favicon.ico.png",
+        width:1200,
+        height: 630,
+        alt:"Mindease",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
  
 };
+
+
 
 // className="min-h-full flex flex-col"
 export default function RootLayout({ children }) {
