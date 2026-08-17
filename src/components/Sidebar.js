@@ -10,7 +10,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
         {isOpen && (
             <div className="fixed insert-0 bg-black/40 z-40 md:hidden" onClick={() => setIsOpen(false)}/>
         )}
-        <aside className={`fixed md:static top-0 left-0 h-full md:h-full w-64 bg-indigo-600 text-white   z-50 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
+        <aside className={`fixed top-0 left-0 h-screen w-64 bg-indigo-600 text-white   z-50 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
 
             <div className="flex items-center justify-between p-6 border-b border-indigo-500">
             <h2 className="text-2xl font-bold">

@@ -24,7 +24,7 @@ export default function LayoutWrapper({ children }) {
             /> 
            )}
           
-            <div className="flex flex-col flex-1 min-h-screen">
+            <div className="flex flex-col flex-1 min-h-screen md:ml-64">
                 {!hideLayout && (
                    <Navbar 
                 setIsOpen={setIsOpen}
