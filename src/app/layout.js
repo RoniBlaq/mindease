@@ -20,7 +20,7 @@ export const metadata = {
     siteName: "Mindease",
     images:[
       {
-        url:"/favicon.ico.png",
+        url:"/preview.png",
         width:1200,
         height: 630,
         alt:"Mindease",
