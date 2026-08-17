@@ -133,11 +133,7 @@ const savePost = async () => {
 
     return (
         <div
-  className={`min-h-screen -m-4 md:-m-6 p-4 md:p-6 transition-colors duration-300 ${
-    dark
-      ? "bg-gray-900 text-white"
-      : "bg-gray-100 text-gray-900"
-  }`}
+  className={dark ? "min-h-screen p-4 bg-black text-white" : "min-h-screen p-4 bg-white text-black"}
 >
 
             <div className="flex justify-end mb-4">
