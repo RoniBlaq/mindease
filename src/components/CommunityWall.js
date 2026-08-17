@@ -119,14 +119,39 @@ const savePost = async () => {
                              } 
                             };
 
+                            const [dark, setDark] = useState(() => {
+                                if (typeof window === "undefined") return false;
+
+                                return localStorage.getItem("dark") === "true";
+                            });
+
+                            useEffect(() => {
+                                localStorage.setItem("dark", dark);
+                            }, [dark]);
+
 
 
     return (
-        <div className="w-full max-w-2xl mx-auto text-gray-500">
+        <div cclassName={`min-h-screen p-4 transition-colors duration-300 ${
+            dark
+            ? "bg-gray-900 text-white"
+            : "bg-gray-100 text-gray-900"
+        }`}>
+
+            <div className="flex justify-end mb-4">
+                            <button
+                onClick={() => setDark(!dark)}
+                    className="text-sm px-3 py-1 rounded-full border hover:opacity-80"
+                >
+                    {dark ? "☀️ Light" : "🌙 Dark"}
+                </button>
+            </div>
+
             <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-400">
            
                 Community Group
             </h1>
+          
             <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 mb-6">
 
                 <textarea value={content} onChange={(e) => setContent(e.target.value)
