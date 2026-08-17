@@ -132,7 +132,7 @@ const savePost = async () => {
 
 
     return (
-        <div cclassName={`min-h-screen p-4 transition-colors duration-300 ${
+        <div className={`min-h-screen p-4 transition-colors duration-300 ${
             dark
             ? "bg-gray-900 text-white"
             : "bg-gray-100 text-gray-900"
@@ -152,7 +152,9 @@ const savePost = async () => {
                 Community Group
             </h1>
           
-            <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 mb-6">
+            <div className={`shadow-lg rounded-2xl p-4 sm:p-6 mb-6 ${
+                dark ? "bg-gray-800 text-white" : "bg-white text-gray-900"
+            }`}>
 
                 <textarea value={content} onChange={(e) => setContent(e.target.value)
                 } placeholder="share an encouraging message..."
@@ -174,8 +176,11 @@ const savePost = async () => {
                 {posts.map((post) => (
                      <div 
                         key={post.id} 
-                        className=" 
-                        bg-white shadow rounded-2xl p-4 border border-gray-100 " >
+                        className={`shadow rounded-2xl p-4 border border ${
+                            dark
+                            ? "bg-gray-800 border-gray-700 text-white"
+                            : "bg-white border-gray-100 text-gray-900"
+                        } `}>
 
                              <div className="flex items-center gap-3 mb-3">
                                  {/* Avatar */}
@@ -185,7 +190,7 @@ const savePost = async () => {
                                       </div>
                                        {/* User Info */}
                                         <div> 
-                                            <h3 className="font-semibold text-gray-800">
+                                            <h3 className={`font-semibold ${dark ? "text-white" : "text-gray-800"}`}>
                                                  {post.name} 
                                                  </h3> 
                                                  <p className="text-xs text-gray-400"> 
@@ -194,7 +199,9 @@ const savePost = async () => {
                                                      </div> 
                                                      </div>
                                                       {/* Post Content */} 
-                                                <p className="text-gray-700 break-words leading-relaxed"> 
+                                                <p className={`break-words leading-relaxed ${
+                                                            dark ? "text-gray-200" : "text-gray-700"
+                                                        }`}> 
                                                         {post.content}
                                                          </p> 
                                                        <div className="mt-4 flex items-center gap-4"> 
